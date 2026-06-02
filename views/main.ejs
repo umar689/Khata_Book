@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <meta name="author" content="Your Name">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Welcome</h1>
+    <h4>No. of records :<%=data.length%></h4>
+    <form action="/create" method="GET">
+            <input type="submit" value="New Hisaab">
+    </form>
+    <hr>
+    <% for(var i=0;i<data.length ;i++){ %>
+    <div>
+        <h3><%= data[i].date %></h3>
+        <p><%= data[i].txt %></p>
+        <!-- <p><%= data[i].id%></p> -->
+        <form action="/view/<%= data[i].id%>" method="GET">
+            <input type="submit" value="view">
+        </form>
+        <br>
+        <form action="/delete/<%= data[i].id%>" method="POST">
+            <input type="submit" value="delete">
+        </form>
+        <br >
+        <form action="/edit/<%= data[i].id%>" method="POST">
+            <input type="submit" value="edit">
+        </form>
+        <hr>
+    </div>
+    <%}%>
+
+</body>
+</html>

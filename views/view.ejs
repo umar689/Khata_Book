@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <meta name="author" content="Your Name">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <h3><%=single.date%></h3>
+    <p><%=single.txt%></p>
+    <form action="/delete/<%= single.id%>" method="POST">
+            <input type="submit" value="delete">
+        </form>
+
+</body>
+</html>
