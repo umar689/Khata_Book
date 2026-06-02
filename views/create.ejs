@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description here">
+    <meta name="description" content="Add new record to Khata Book">
     <meta name="author" content="Your Name">
-
-    <title>Document</title>
+    <title>Add New Record | Khata Book</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1><span class="emoji">📔</span> Khata Book</h1>
+            <p><span class="emoji">✨</span> Your Personal Ledger & Daily Records <span class="emoji">✨</span></p>
+        </header>
 
-    <h1>New Hisaab</h1>
-    <form action="/" method="POST">
-        <textarea type="text" placeholder="enter today's hisaab" name="hisaabtext" rows="5" cols="35"></textarea>
-        <br><br>
-        <input type="submit" value="create"></input>
-    </form>
-    
+        <div class="hero">
+            <h2><span class="emoji">➕</span> Add New Record</h2>
+            <p><span class="emoji">💭</span> Write down what's on your mind today</p>
+        </div>
 
+        <div class="card">
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="hisaabtext">📝 Your Record</label>
+                    <textarea 
+                        id="hisaabtext"
+                        placeholder="Write your daily record, expense, thought, or anything important..." 
+                        name="hisaabtext" 
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%; padding: 14px; font-size: 1rem;">✅ Save Record</button>
+                <a href="/" class="btn btn-secondary" style="width: 100%; padding: 14px; margin-top: 12px; font-size: 1rem;">← Go Back</a>
+            </form>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Khata Book | v2.1</p>
+        </footer>
+    </div>
 </body>
 </html>

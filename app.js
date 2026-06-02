@@ -4,6 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'));
 
 var arr=[
     {

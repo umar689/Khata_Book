@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description here">
+    <meta name="description" content="Edit record in Khata Book">
     <meta name="author" content="Your Name">
-
-    <title>Document</title>
+    <title>Edit Record | Khata Book</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1><span class="emoji">📔</span> Khata Book</h1>
+            <p><span class="emoji">✨</span> Your Personal Ledger & Daily Records <span class="emoji">✨</span></p>
+        </header>
 
-    <h1>Edit Hisaab</h1>
-    <form action="/" method="POST">
-        <textarea type="text" placeholder="edit today's hisaab" name="hisaabtext" rows="5" cols="35"><%=entry.txt%></textarea>
-        <br><br>
-        <input type="submit" value="Edit"></input>
-    </form>
-    
+        <div class="hero">
+            <h2><span class="emoji">✏️</span> Edit Record</h2>
+            <p><span class="emoji">📝</span> Update your record details</p>
+        </div>
 
+        <div class="card">
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="hisaabtext">📝 Your Record</label>
+                    <textarea 
+                        id="hisaabtext"
+                        placeholder="Edit your record..." 
+                        name="hisaabtext" 
+                        required><%=entry.txt%></textarea>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%; padding: 14px; font-size: 1rem;">💾 Update Record</button>
+                <a href="/" class="btn btn-secondary" style="width: 100%; padding: 14px; margin-top: 12px; font-size: 1rem;">← Go Back</a>
+            </form>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Khata Book | v2.1</p>
+        </footer>
+    </div>
 </body>
 </html>
